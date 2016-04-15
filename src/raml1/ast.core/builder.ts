@@ -631,6 +631,12 @@ function getType(node:hl.IHighLevelNode,expression:string):hl.ITypeDefinition{
     if (pt.isString()){
         return (node.definition().universe().type("StringTypeDeclaration"));
     }
+    if (pt.isBoolean()){
+        return (node.definition().universe().type("BooleanTypeDeclaration"));
+    }
+    if (pt.isInteger()){
+        return (node.definition().universe().type("IntegerTypeDeclaration"));
+    }
     if (pt.isNumber()){
         return (node.definition().universe().type("NumberTypeDeclaration"));
     }
